@@ -29,7 +29,7 @@ def parse message(message):
         print(f"Error paersing message: {message}, Error: {e}")
 
 def connect_to_db():
-    with open(r"/Users/Moi/Downloads/m.projects/cred.yaml") as creds:
+    with open(r"/Users/Moi/m.projects/cred.yaml") as creds:
         try:
             cfg = yaml.safe_load(creds)
         except yaml.YAMLError as exc:

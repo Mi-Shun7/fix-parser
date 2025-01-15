@@ -137,7 +137,7 @@ def process_file(file_path, direction, conn):
                     insert_into_tableMessages(batch, direction, conn, file_id, row_count)
     
     except Exception as e:
-        priint(f"Error processing file {file_path}: {e}")
+        print(f"Error processing file {file_path}: {e}")
         success = False
 
     if not success:
@@ -199,7 +199,7 @@ def read_directory(directory_path, conn):
         direction = 'Inmsg' if 'inmsg' in filename else 'Outmsg'
         readfile(file_path, direction, conn)
 
-""" FOlder path and call DB connection """
+""" Folder path and call DB connection """
 directory_path = r"C:\Path\to\gz_file"
 temp_dir = r"C:\Path\to\temp"
 conn = connect_to_db
